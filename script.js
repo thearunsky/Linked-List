@@ -24,6 +24,11 @@ class Nodes {
             next: null
         }
 
+        if(this.head==null){
+            this.head = newNode
+            this.tail = this.head
+        }
+
         // this.tail.next = this.head.next = newNode
         this.tail.next = newNode
 
@@ -40,7 +45,7 @@ class Nodes {
         while (!(currentNode === null)) {
 
             let main = document.createElement("div")
-            main.classList.add("nodeBorder", "col-1")
+            main.classList.add("nodeBorder", "col-2", "col-lg-1")
             let inner = `<span class="node">${currentNode.value}</span> <i class="fa-solid fa-arrow-right"></i>`
             main.innerHTML = inner
 
@@ -205,7 +210,10 @@ class Nodes {
     }
 
 }
-let list = new Nodes(1)
+
+let a = prompt("What will be the head of your linked list ?")
+
+let list = new Nodes(a)
 list.traversing()
 
 
