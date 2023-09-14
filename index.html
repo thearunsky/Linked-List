@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Calculator</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div style="height: 80vh; width: 100%;" class="bg-white">
+            <div class="row">
+                <div class="col">
+                    <h3 class="text-center">Linked List Methods And Functions</h3>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- All nodes -->
+            <div class="row d-flex justify-content-center" id="append_node">
+            </div>
+
+            <hr>
+
+            <!-- Methods -->
+            <div class="allMethods">
+                <h1 class="text-center mt-5 ">Append</h1>
+                <div class="row d-flex justify-content-around">
+                    <div class="col-8 col-md-3 mt-3 mt-md-0 input-group mx-5">
+                        <input type="text" id="Add_Node_First_Value" class="form-control"
+                            placeholder="Add a node at first place" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-success" id="Add_Node_First_Btn" type="button">Add
+                                First</button>
+                        </div>
+                    </div>
+
+                    <div class="col-8 col-md-3 mt-3 mt-md-0 input-group mx-5">
+                        <input type="text" id="Add_Node_Mid_Value" class="form-control" placeholder="Node Value"
+                            aria-describedby="basic-addon2">
+                        <input type="text" id="Add_Node_Mid_Index" class="form-control" placeholder="Node Index"
+                            aria-describedby="basic-addon2">
+
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-success" id="Add_Node_Mid_Btn" type="button">Add Mid</button>
+                        </div>
+                    </div>
+
+                    <div class="col-8 col-md-3 mt-3 mt-md-0 input-group mx-5">
+                        <input type="text" id="Add_Node_End_Value" class="form-control"
+                            placeholder="Add a node at last place" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-success" id="Add_Node_End_Btn" type="button">Add
+                                Last</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                <h1 class="text-center mt-5">Update and Delete</h1>
+                <div class="row d-flex justify-content-around">
+
+                    <!-- Update -->
+                    <div class="col-8 col-md-3 mt-3 mt-md-0 input-group mx-5">
+                        <input type="text" id="Update_Value" class="form-control" placeholder="New Node Value"
+                            aria-describedby="basic-addon2">
+                        <input type="text" id="Update_Index" class="form-control" placeholder="Which Index ?"
+                            aria-describedby="basic-addon2">
+
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-success" id="Update_Btn" type="button">Update It</button>
+                        </div>
+                    </div>
+
+                    <!-- Delete -->
+                    <div class="col-8 col-md-3 mt-3 mt-md-0 input-group mx-5">
+                        <input type="text" id="Delete_Index" class="form-control"
+                            placeholder="Which index do you wanna delete ?" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-danger" id="Delete_Btn" type="button">Delete It</button>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                <h1 class="text-center mt-5">Search</h1>
+                <div class="row d-flex justify-content-around">
+
+                    <!-- Search By value -->
+                    <div class="col-8 col-md-3 mt-3 mt-md-0 input-group mx-5">
+                        <input type="text" id="Search_Value" class="form-control" placeholder="Search by Value"
+                            aria-describedby="basic-addon2">
+
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-success" id="Search_Value_Btn" type="button">Search</button>
+                        </div>
+                    </div>
+
+                    <!-- Search by index -->
+                    <div class="col-8 col-md-3 mt-3 mt-md-0 input-group mx-5">
+                        <input type="text" id="Search_Index" class="form-control"
+                            placeholder="Search by Index" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-success" id="Search_Index_Btn" type="button">Search</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <hr>
+                <h1 class="text-center mt-5">Reverse</h1>
+                <div class="row d-flex justify-content-around">
+                    <button class="btn btn-outline-success" id="swap" type="button">Swap</button>
+                    <button class="btn btn-outline-success" id="reverse" type="button">Reverse</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
